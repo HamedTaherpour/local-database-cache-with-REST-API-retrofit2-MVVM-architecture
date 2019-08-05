@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.OnIte
 
         progress = new ProgressDialog(this);
         progress.setMessage("Wait . . .");
-        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progress.setIndeterminate(true);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false));
         recyclerView.setHasFixedSize(true);
@@ -70,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.OnIte
                     }
                     case ERROR: {
                         Toast.makeText(MainActivity.this, "Error: " + listResource.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.i(TAG, "Error: " + listResource.getMessage());
                         setProgress(false);
                         break;
                     }

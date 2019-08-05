@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <ImageView
+        android:layout_marginTop="5dp"
         android:id="@+id/iv"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -21,6 +22,8 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lines="2"
+            android:gravity="center|left"
             android:text="@string/app_name"
             android:textAppearance="@style/TextViewBoldFont"
             android:textColor="@color/colorTextTitle"
@@ -34,6 +37,7 @@
             android:layout_marginTop="5dp"
             android:text="@string/app_name"
             android:textColor="@color/colorText"
+            android:gravity="center|left"
             android:textSize="12sp" />
 
     </LinearLayout>
